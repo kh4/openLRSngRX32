@@ -4572,6 +4572,22 @@ It has reduced top mask to make it harder to put the component on the wrong side
 <circle x="0" y="0" radius="0.40160625" width="0" layer="29"/>
 <circle x="2.54" y="0" radius="0.40160625" width="0" layer="29"/>
 </package>
+<package name="EIA3528">
+<wire x1="-0.9" y1="-1.6" x2="-2.6" y2="-1.6" width="0.2032" layer="21"/>
+<wire x1="-2.6" y1="-1.6" x2="-2.6" y2="1.55" width="0.2032" layer="21"/>
+<wire x1="-2.6" y1="1.55" x2="-0.9" y2="1.55" width="0.2032" layer="21"/>
+<wire x1="1" y1="-1.55" x2="2.2" y2="-1.55" width="0.2032" layer="21"/>
+<wire x1="2.2" y1="-1.55" x2="2.6" y2="-1.2" width="0.2032" layer="21"/>
+<wire x1="2.6" y1="-1.2" x2="2.6" y2="1.25" width="0.2032" layer="21"/>
+<wire x1="2.6" y1="1.25" x2="2.2" y2="1.55" width="0.2032" layer="21"/>
+<wire x1="2.2" y1="1.55" x2="1" y2="1.55" width="0.2032" layer="21"/>
+<wire x1="2.2" y1="1.55" x2="1" y2="1.55" width="0.2032" layer="21"/>
+<wire x1="0.609" y1="1.311" x2="0.609" y2="-1.286" width="0.2032" layer="21" style="longdash"/>
+<smd name="C" x="-1.65" y="0" dx="2.5" dy="1.2" layer="1" rot="R90"/>
+<smd name="A" x="1.65" y="0" dx="2.5" dy="1.2" layer="1" rot="R90"/>
+<text x="-2.27" y="-1.27" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="3.24" y="-1.37" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="CAP">
@@ -4583,6 +4599,18 @@ It has reduced top mask to make it harder to put the component on the wrong side
 <rectangle x1="-2.032" y1="1.524" x2="2.032" y2="2.032" layer="94"/>
 <pin name="1" x="0" y="5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="2" x="0" y="-2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
+</symbol>
+<symbol name="CAP_POL">
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.016" x2="0" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="0" y1="-1" x2="2.4892" y2="-1.8542" width="0.254" layer="94" curve="-37.878202" cap="flat"/>
+<wire x1="-2.4669" y1="-1.8504" x2="0" y2="-1.0161" width="0.254" layer="94" curve="-37.376341" cap="flat"/>
+<text x="1.016" y="0.635" size="1.778" layer="95">&gt;NAME</text>
+<text x="1.016" y="-4.191" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-2.253" y1="0.668" x2="-1.364" y2="0.795" layer="94"/>
+<rectangle x1="-1.872" y1="0.287" x2="-1.745" y2="1.176" layer="94"/>
+<pin name="+" x="0" y="2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
+<pin name="-" x="0" y="-5.08" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -4721,6 +4749,27 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </device>
 </devices>
 </deviceset>
+<deviceset name="47UF-TANT" prefix="C" uservalue="yes">
+<description>47uF Tantalum SMT&lt;br&gt;
+CAP-08310- 10V 10% (EIA-3528)</description>
+<gates>
+<gate name="G$1" symbol="CAP_POL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="EIA3528">
+<connects>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-08310"/>
+<attribute name="VALUE" value="47uF" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
 </devicesets>
 </library>
 <library name="crystal_3225">
@@ -4851,6 +4900,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <part name="JP7" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="JP8" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
+<part name="C12" library="SparkFun-Capacitors" deviceset="CAP" device="0805"/>
+<part name="C13" library="SparkFun-Capacitors" deviceset="CAP" device="0805"/>
+<part name="C14" library="SparkFun-Capacitors" deviceset="47UF-TANT" device="" value="47uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -4925,6 +4977,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <instance part="JP7" gate="G$1" x="119.38" y="-5.08" rot="R180"/>
 <instance part="JP8" gate="G$1" x="119.38" y="-20.32" rot="R180"/>
 <instance part="GND16" gate="1" x="106.68" y="-25.4"/>
+<instance part="C12" gate="G$1" x="-22.86" y="30.48"/>
+<instance part="C13" gate="G$1" x="-27.94" y="30.48"/>
+<instance part="C14" gate="G$1" x="2.54" y="33.02"/>
 </instances>
 <busses>
 </busses>
@@ -4972,6 +5027,17 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <pinref part="IC2" gate="G$1" pin="GND"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="-10.16" y1="22.86" x2="-10.16" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="C13" gate="G$1" pin="2"/>
+<wire x1="-10.16" y1="22.86" x2="-22.86" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-22.86" y1="22.86" x2="-27.94" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="-27.94" y1="22.86" x2="-27.94" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="C12" gate="G$1" pin="2"/>
+<wire x1="-22.86" y1="27.94" x2="-22.86" y2="22.86" width="0.1524" layer="91"/>
+<junction x="-22.86" y="22.86"/>
+<junction x="-10.16" y="22.86"/>
+<pinref part="C14" gate="G$1" pin="-"/>
+<wire x1="-10.16" y1="22.86" x2="2.54" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="22.86" x2="2.54" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="POWER" pin="VSS_1"/>
@@ -5157,6 +5223,10 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <pinref part="P+2" gate="VCC" pin="VCC"/>
 <pinref part="IC2" gate="G$1" pin="VIN"/>
 <wire x1="-22.86" y1="40.64" x2="-22.86" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="C12" gate="G$1" pin="1"/>
+<junction x="-22.86" y="35.56"/>
+<pinref part="C13" gate="G$1" pin="1"/>
+<wire x1="-27.94" y1="35.56" x2="-22.86" y2="35.56" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP6" gate="G$1" pin="5"/>
@@ -5174,6 +5244,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <pinref part="IC2" gate="G$1" pin="VOUT"/>
 <wire x1="2.54" y1="35.56" x2="5.08" y2="35.56" width="0.1524" layer="91"/>
 <label x="5.08" y="35.56" size="1.778" layer="95"/>
+<pinref part="C14" gate="G$1" pin="+"/>
+<junction x="2.54" y="35.56"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="POWER" pin="VDD_3"/>
