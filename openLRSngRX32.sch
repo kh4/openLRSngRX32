@@ -5454,6 +5454,7 @@ CAP-08310- 10V 10% (EIA-3528)</description>
 <part name="R17" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES"/>
 <part name="JP9" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
 <part name="JP10" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
+<part name="C15" library="SparkFun-Capacitors" deviceset="CAP" device="0805"/>
 </parts>
 <sheets>
 <sheet>
@@ -5537,6 +5538,7 @@ CAP-08310- 10V 10% (EIA-3528)</description>
 <instance part="R17" gate="G$1" x="-35.56" y="81.28" rot="R90"/>
 <instance part="JP9" gate="G$1" x="-45.72" y="60.96"/>
 <instance part="JP10" gate="G$1" x="-45.72" y="48.26"/>
+<instance part="C15" gate="G$1" x="-43.18" y="33.02"/>
 </instances>
 <busses>
 </busses>
@@ -5702,6 +5704,9 @@ CAP-08310- 10V 10% (EIA-3528)</description>
 <junction x="-60.96" y="30.48"/>
 <junction x="-63.5" y="30.48"/>
 <junction x="-68.58" y="30.48"/>
+<pinref part="C15" gate="G$1" pin="2"/>
+<wire x1="-48.26" y1="30.48" x2="-43.18" y2="30.48" width="0.1524" layer="91"/>
+<junction x="-48.26" y="30.48"/>
 </segment>
 <segment>
 <wire x1="-38.1" y1="71.12" x2="-33.02" y2="71.12" width="0.1524" layer="91"/>
@@ -5901,6 +5906,9 @@ CAP-08310- 10V 10% (EIA-3528)</description>
 <junction x="-58.42" y="38.1"/>
 <junction x="-53.34" y="38.1"/>
 <label x="-63.5" y="43.18" size="1.778" layer="95"/>
+<pinref part="C15" gate="G$1" pin="1"/>
+<wire x1="-48.26" y1="38.1" x2="-43.18" y2="38.1" width="0.1524" layer="91"/>
+<junction x="-48.26" y="38.1"/>
 </segment>
 <segment>
 <pinref part="JP5" gate="G$1" pin="3"/>
@@ -6108,9 +6116,9 @@ CAP-08310- 10V 10% (EIA-3528)</description>
 <label x="27.94" y="73.66" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="PORTB_L" pin="PB6"/>
-<wire x1="86.36" y1="78.74" x2="88.9" y2="78.74" width="0.1524" layer="91"/>
-<label x="88.9" y="78.74" size="1.778" layer="95"/>
+<pinref part="IC1" gate="PORTB_H" pin="PB9"/>
+<wire x1="86.36" y1="66.04" x2="88.9" y2="66.04" width="0.1524" layer="91"/>
+<label x="88.9" y="66.04" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM10" class="0">
@@ -6120,9 +6128,9 @@ CAP-08310- 10V 10% (EIA-3528)</description>
 <label x="27.94" y="71.12" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="PORTB_L" pin="PB7"/>
-<wire x1="86.36" y1="76.2" x2="88.9" y2="76.2" width="0.1524" layer="91"/>
-<label x="88.9" y="76.2" size="1.778" layer="95"/>
+<pinref part="IC1" gate="PORTB_H" pin="PB8"/>
+<wire x1="86.36" y1="68.58" x2="88.9" y2="68.58" width="0.1524" layer="91"/>
+<label x="88.9" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM11" class="0">
@@ -6132,9 +6140,9 @@ CAP-08310- 10V 10% (EIA-3528)</description>
 <label x="27.94" y="68.58" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="PORTB_H" pin="PB8"/>
-<wire x1="86.36" y1="68.58" x2="88.9" y2="68.58" width="0.1524" layer="91"/>
-<label x="88.9" y="68.58" size="1.778" layer="95"/>
+<pinref part="IC1" gate="PORTB_L" pin="PB7"/>
+<wire x1="86.36" y1="76.2" x2="88.9" y2="76.2" width="0.1524" layer="91"/>
+<label x="88.9" y="76.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="PWM12" class="0">
@@ -6144,9 +6152,9 @@ CAP-08310- 10V 10% (EIA-3528)</description>
 <label x="27.94" y="66.04" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="PORTB_H" pin="PB9"/>
-<wire x1="86.36" y1="66.04" x2="88.9" y2="66.04" width="0.1524" layer="91"/>
-<label x="88.9" y="66.04" size="1.778" layer="95"/>
+<pinref part="IC1" gate="PORTB_L" pin="PB6"/>
+<wire x1="86.36" y1="78.74" x2="88.9" y2="78.74" width="0.1524" layer="91"/>
+<label x="88.9" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="NSS" class="0">
