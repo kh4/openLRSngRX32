@@ -5466,7 +5466,7 @@ CAP-08310- 10V 10% (EIA-3528)</description>
 <instance part="IC1" gate="PORTB_L" x="76.2" y="83.82"/>
 <instance part="IC1" gate="PORTB_H" x="76.2" y="60.96"/>
 <instance part="IC1" gate="POWER" x="30.48" y="25.4"/>
-<instance part="IC1" gate="PORTC" x="27.94" y="-2.54"/>
+<instance part="IC1" gate="PORTC" x="33.02" y="-7.62"/>
 <instance part="IC1" gate="PORTD/OSC" x="58.42" y="40.64"/>
 <instance part="IC1" gate="AN_POWER" x="55.88" y="25.4"/>
 <instance part="IC1" gate="RESET" x="55.88" y="7.62"/>
@@ -6157,23 +6157,6 @@ CAP-08310- 10V 10% (EIA-3528)</description>
 <label x="88.9" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="NSS" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="NSEL"/>
-<wire x1="109.22" y1="73.66" x2="106.68" y2="73.66" width="0.1524" layer="91"/>
-<label x="101.6" y="73.66" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="NSEL"/>
-<wire x1="109.22" y1="33.02" x2="106.68" y2="33.02" width="0.1524" layer="91"/>
-<label x="101.6" y="33.02" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="IC1" gate="PORTB_H" pin="PB12"/>
-<wire x1="86.36" y1="58.42" x2="88.9" y2="58.42" width="0.1524" layer="91"/>
-<label x="88.9" y="58.42" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="SCK" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="SCLK"/>
@@ -6225,16 +6208,28 @@ CAP-08310- 10V 10% (EIA-3528)</description>
 <label x="88.9" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$21" class="0">
+<net name="RFM1IRQ" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="NIRQ"/>
 <wire x1="109.22" y1="76.2" x2="106.68" y2="76.2" width="0.1524" layer="91"/>
+<label x="99.06" y="76.2" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTC" pin="PC13"/>
+<wire x1="25.4" y1="-5.08" x2="22.86" y2="-5.08" width="0.1524" layer="91"/>
+<label x="12.7" y="-5.08" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$22" class="0">
+<net name="RFM2IRQ" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="NIRQ"/>
 <wire x1="109.22" y1="35.56" x2="106.68" y2="35.56" width="0.1524" layer="91"/>
+<label x="96.52" y="35.56" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTC" pin="PC14"/>
+<wire x1="25.4" y1="-7.62" x2="22.86" y2="-7.62" width="0.1524" layer="91"/>
+<label x="12.7" y="-7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -6483,6 +6478,29 @@ CAP-08310- 10V 10% (EIA-3528)</description>
 <pinref part="IC1" gate="PORTA_L" pin="PA4"/>
 <wire x1="48.26" y1="83.82" x2="45.72" y2="83.82" width="0.1524" layer="91"/>
 <label x="40.64" y="83.82" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="RFM2CS" class="0">
+<segment>
+<pinref part="IC1" gate="PORTC" pin="PC15"/>
+<wire x1="25.4" y1="-10.16" x2="22.86" y2="-10.16" width="0.1524" layer="91"/>
+<label x="12.7" y="-10.16" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="NSEL"/>
+<wire x1="109.22" y1="33.02" x2="106.68" y2="33.02" width="0.1524" layer="91"/>
+<label x="96.52" y="33.02" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="RFM1CS" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="NSEL"/>
+<wire x1="109.22" y1="73.66" x2="106.68" y2="73.66" width="0.1524" layer="91"/>
+<label x="96.52" y="73.66" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTB_H" pin="PB12"/>
+<wire x1="86.36" y1="58.42" x2="88.9" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
