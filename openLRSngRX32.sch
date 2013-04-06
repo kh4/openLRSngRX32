@@ -9023,8 +9023,8 @@ Source: www.kingbright.com</description>
 <part name="C16" library="SparkFun-Capacitors" deviceset="47UF-TANT" device="" value="47uF"/>
 <part name="JP11" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="C17" library="SparkFun-Capacitors" deviceset="CAP" device="0805"/>
-<part name="LED1" library="led" deviceset="LED" device="SML0805"/>
-<part name="LED2" library="led" deviceset="LED" device="SML0805"/>
+<part name="LED1" library="led" deviceset="LED" device="SML0805" value="RED"/>
+<part name="LED2" library="led" deviceset="LED" device="SML0805" value="GREEN"/>
 <part name="R18" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="330R"/>
 <part name="R19" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="330R"/>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
