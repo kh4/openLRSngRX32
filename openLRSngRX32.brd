@@ -107,6 +107,14 @@
 <wire x1="42.977" y1="0" x2="42.977" y2="39.36" width="0" layer="20"/>
 <wire x1="42.977" y1="39.36" x2="0" y2="39.36" width="0" layer="20"/>
 <wire x1="0" y1="39.36" x2="0" y2="0" width="0" layer="20"/>
+<text x="18.669" y="27.813" size="1.016" layer="25">BOOT0</text>
+<text x="13.716" y="20.193" size="1.016" layer="25" rot="R90">RESET</text>
+<text x="19.05" y="30.48" size="1.016" layer="25">EXTCAP</text>
+<text x="12.827" y="34.036" size="1.016" layer="25" rot="MR0">AIN4</text>
+<text x="12.7" y="36.703" size="1.016" layer="26" rot="MR0">AIN5</text>
+<text x="12.192" y="1.397" size="1.016" layer="25" rot="MR0">PPM</text>
+<text x="16.256" y="3.556" size="1.016" layer="25">SERIAL</text>
+<text x="39.243" y="0.381" size="1.016" layer="25">I2C</text>
 </plain>
 <libraries>
 <library name="stm32">
@@ -1654,11 +1662,17 @@ design rules under a new name.</description>
 <element name="C17" library="SparkFun-Capacitors" package="0805" value="" x="30.226" y="28.194" smashed="yes" rot="R270">
 <attribute name="VALUE" x="28.829" y="29.21" size="0.4064" layer="27" rot="R270"/>
 </element>
-<element name="LED1" library="led" package="SML0805" value="GRN" x="40.386" y="7.874" smashed="yes" rot="R180"/>
-<element name="LED2" library="led" package="SML0805" value="BLU" x="40.386" y="5.588" smashed="yes" rot="R180"/>
+<element name="LED1" library="led" package="SML0805" value="GRN" x="40.386" y="7.874" smashed="yes" rot="R180">
+<attribute name="VALUE" x="38.584" y="8.35" size="1.016" layer="27" rot="R180"/>
+</element>
+<element name="LED2" library="led" package="SML0805" value="BLU" x="40.386" y="5.588" smashed="yes" rot="R180">
+<attribute name="VALUE" x="38.584" y="6.064" size="1.016" layer="27" rot="R180"/>
+</element>
 <element name="R18" library="SparkFun-Resistors" package="0805" value="330R" x="26.162" y="4.318" smashed="yes" rot="R180"/>
 <element name="R19" library="SparkFun-Resistors" package="0805" value="330R" x="29.21" y="4.318" smashed="yes" rot="R180"/>
-<element name="LED3" library="led" package="SML0805" value="RED" x="40.386" y="10.16" smashed="yes" rot="R180"/>
+<element name="LED3" library="led" package="SML0805" value="RED" x="40.386" y="10.16" smashed="yes" rot="R180">
+<attribute name="VALUE" x="38.457" y="10.636" size="1.016" layer="27" rot="R180"/>
+</element>
 <element name="R20" library="SparkFun-Resistors" package="0805" value="330R" x="22.606" y="4.318" smashed="yes" rot="R180"/>
 </elements>
 <signals>
