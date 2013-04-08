@@ -122,6 +122,7 @@
 <wire x1="9.271" y1="3.175" x2="9.144" y2="3.048" width="0.254" layer="26"/>
 <text x="12.573" y="23.876" size="1.778" layer="26" rot="MR270">PWM1...12</text>
 <text x="13.97" y="32.766" size="1.016" layer="26" rot="MR270">https://github.com/kh4/openLRSngRX32</text>
+<text x="24.003" y="20.955" size="1.778" layer="25">beta_v0</text>
 </plain>
 <libraries>
 <library name="stm32">
