@@ -9030,6 +9030,8 @@ Source: www.kingbright.com</description>
 <part name="GND18" library="supply1" deviceset="GND" device=""/>
 <part name="LED3" library="led" deviceset="LED" device="SML0805" value="RED"/>
 <part name="R20" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="330R"/>
+<part name="R21" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="10k"/>
+<part name="GND19" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -9125,6 +9127,8 @@ Source: www.kingbright.com</description>
 <instance part="GND18" gate="1" x="5.08" y="48.26"/>
 <instance part="LED3" gate="G$1" x="22.86" y="60.96" rot="R270"/>
 <instance part="R20" gate="G$1" x="33.02" y="60.96"/>
+<instance part="R21" gate="G$1" x="106.68" y="96.52" rot="R180"/>
+<instance part="GND19" gate="1" x="114.3" y="93.98"/>
 </instances>
 <busses>
 </busses>
@@ -9386,6 +9390,11 @@ Source: www.kingbright.com</description>
 <wire x1="17.78" y1="50.8" x2="5.08" y2="50.8" width="0.1524" layer="91"/>
 <junction x="17.78" y="55.88"/>
 <junction x="17.78" y="50.8"/>
+</segment>
+<segment>
+<pinref part="R21" gate="G$1" pin="1"/>
+<pinref part="GND19" gate="1" pin="GND"/>
+<wire x1="111.76" y1="96.52" x2="114.3" y2="96.52" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -10179,6 +10188,15 @@ Source: www.kingbright.com</description>
 <wire x1="43.18" y1="50.8" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="PORTA_H" pin="PA13"/>
 <wire x1="43.18" y1="55.88" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="BOOT1" class="0">
+<segment>
+<pinref part="IC1" gate="PORTB_L" pin="PB2"/>
+<pinref part="R21" gate="G$1" pin="2"/>
+<wire x1="86.36" y1="88.9" x2="101.6" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="88.9" x2="101.6" y2="96.52" width="0.1524" layer="91"/>
+<label x="88.9" y="88.9" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
